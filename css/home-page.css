@@ -1,0 +1,594 @@
+
+
+/* Style banner*/
+.slideShow
+{
+    position: relative;
+    margin-bottom: 40px;
+}
+.slider
+{
+    overflow: hidden;
+}
+.slider,.slide
+{
+    width: 100%;
+    height: 100%;
+}
+.slide img
+{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    animation: scale 3.5s;
+}
+
+@keyframes scale
+{
+    0%
+    {
+        transform: scale(1.3);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+}
+
+.slide
+{
+    display: none;
+}
+.slide.active
+{
+    display: block;
+}
+.control
+{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border:1px solid #ffffff;
+    border-radius: 100%;
+    color: #ffffff;
+    opacity: .4;
+    position: absolute;
+    transition: all .5s;
+    cursor: pointer;
+}
+.prev
+{
+    left: 5%;
+    top: 50%;
+}
+.next
+{
+    right: 5%;
+    top: 50%;
+}
+
+.slideShow:hover .control
+{
+    opacity: 1;
+}
+
+.control:hover
+{
+    border-color: #eb742a;
+    background-color: #eb742a;
+    color: #fff;
+}
+
+
+
+/*style policy*/
+.policy
+{
+    margin-bottom: 45px; 
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+
+.policy .policy-item
+{
+    border: 1px solid black;
+    height: 200px;
+}
+
+
+
+
+
+
+/*style collection*/
+.collection
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    margin-bottom: 45px;
+}
+.main-collection
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(244,244,244);
+    position: relative;
+    z-index: 10;
+}
+
+.main-collection:hover .overlay,.collection-item:hover .overlay
+{
+    opacity: .4;
+}
+
+.main-collection:hover .overlay-before,.collection-item:hover .overlay-before
+{
+    transform: scaleX(1);
+}
+.main-collection:hover .overlay-after,.collection-item:hover .overlay-after
+{
+    transform: scaleY(1);
+}
+
+.main-collection:hover .collection-content a,.main-collection:hover .collection-content p
+
+{
+    color: #fff;
+}
+.sub-collection
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.collection-item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(244,244,244);
+    position: relative;
+}
+
+.collection-item:hover .collection-content a,.collection-item:hover .collection-content p
+{
+    color: #fff;
+}
+
+.collection-content
+{
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+    z-index: 10;
+}
+
+
+.collection-content >a
+{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+}
+.collection-content p
+{
+    color: #889988;
+}
+.collection-content >.btn
+{
+    width: 105px;
+    margin-top: 10px;
+}
+
+
+/*style title*/
+.title
+{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.title .line
+{
+    width: 49%;
+    height: 1px;
+    background-color: #867676;
+}
+.title .line:nth-child(2)
+{
+    float: right;
+}
+.title i
+{
+    color: #867676;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+
+
+/*style product*/
+
+.product
+{
+    margin-bottom: 45px;
+}
+
+.product-item
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    margin-bottom:100px;
+}
+.product-item .item
+{
+    position: relative;
+    height: 400px;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+.item img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item-img
+{
+    position: relative;
+}
+.item-img:hover .overlay
+{
+    opacity: .4;
+}
+.item-content 
+{
+    margin-top: 10px;
+    font-size: 1.14286em;
+    font-weight: 600;
+    line-height: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item-content a
+{
+    color: #e25700;
+}
+.product-pride
+{
+    margin-top: 10px;
+    font-size: 15px;
+    color: #333;
+    line-height: 23px;
+}
+
+.product-btn
+{
+    font-weight: 400;
+    margin-top: 10px;
+    background-color: #e25700;
+    padding: 10px 5px;
+}
+.product-btn a
+{
+    color: #fff;
+    padding: 10px 5px;
+}
+
+
+
+.product .seemore
+{
+    width: 165px;
+    background-color: #e25700;
+    padding: 15px 20px;
+    margin-left: 44%;
+}
+
+.item-action
+{
+    position: absolute;
+    left: 45%;
+    line-height: 320px;
+    z-index: 10;
+
+}
+.item-action a
+{
+    color: #fff;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    transition: all .4s;
+}
+.item-action:hover a
+{
+    color: #333;
+    background-color: #ffffff;
+}
+.item-action:hover::before
+{
+    transform: translateX(1);
+}
+
+.seemore a
+{
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 15px 20px;
+}
+
+
+
+/*style sale*/
+.sale
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:30px;
+    margin-bottom: 45px;
+}
+.sale-item
+{
+    overflow: hidden;
+}
+
+.sale-item img
+{
+    width: 100%;
+    transition: all .4s;
+}
+.sale-item:hover img
+{
+    transform: scale(1.01);
+    opacity: .76;
+}
+
+
+
+/*style news*/
+.blog
+{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    margin-bottom: 45px;
+}
+.blog-item
+{
+    position: relative;
+}
+.blog-img
+{
+    overflow: hidden;
+    height: 270px;
+}
+.blog-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .7s;
+
+}
+.blog-name
+{
+    margin: 10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+.post-time,.blog-sumary
+{
+    color: #898989;
+    font-size: 0.92857em;
+    margin-bottom: 10px;
+}
+.post-time .author
+{
+    color: #252525;
+}
+
+.blog-btn
+{
+    display: inline-block;
+    background-color: #e25700;
+    margin-bottom: 10px;
+}
+.blog-btn a
+{
+    color: #fff;
+}
+
+.blog-item:hover img
+{
+    transform: scale(1.1);
+}
+
+.blog-item::before
+{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #e25700;   
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: all .7s;
+}
+.blog-item:hover::before
+{
+    transform: scaleX(1);
+}
+.blog-icon
+{
+    display: inline-block;
+    transition: all .7s;
+}
+.blog-btn:hover .blog-icon
+{
+    transform: translateX(5px);
+}
+
+
+/* style brands*/
+.partner-container
+{
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.partner
+{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+.partner img
+{
+    width: 100%;
+    background-color: #e7e6e6;
+    filter: grayscale(100%);
+    transition: filter .7s;
+}
+.partner img:hover
+{
+    filter: none;
+}
+
+.arrow
+{
+    top: 33%;
+    position: absolute;
+    font-size: 40px;
+    cursor: pointer;
+
+}
+.left
+{
+    left: -10%;
+}
+.right
+{
+    right: -10%;
+}
+
+/*style register*/
+.register
+{
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+.register-img
+{
+    width: 100%;
+    height: 100%;
+}
+.register img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.register-content
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 50px 22% 70px;
+}
+
+.register-title
+{
+    margin-bottom: 10px;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.register-content p
+{
+    color: #666666;
+}
+.input-group
+{
+    margin-top: 33px;
+    height: 50px;
+}
+.input-group >.btn
+{
+    display: inline-block;
+    height: 100%;
+    color: #fff;
+    border-color:#e25700 ;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-left: 10px;
+}
+.input-group button
+{
+    border: none;
+}
+.register-content input
+{
+    height: 100%;
+    padding: 10px 20px;
+    width: 500px;
+    border: #fff;
+}
+
+
+
+
+.item-control
+{
+    position: absolute;
+    top: 45%;
+    left: 42%;
+    z-index: 10;
+    font-size: 45px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity .5s;
+    transition: transform .5s;
+    
+}
+.item-control a
+{
+    color: #ffffff;
+}
+
+.item-img:hover .item-control
+{
+    opacity: 1;
+    transform: translateY(0);
+}
+.item-img:hover .overlay-before
+{
+    transform: scaleX(1);
+}
+.item-img:hover .overlay-after
+{
+    transform: scaleY(1);
+}
+
+/* .item-control:hover .overlay-before
+{
+    transform: scaleX(1);
+}
+.item-control:hover .overlay-after
+{
+    transform: scaleY(1);
+} */
+

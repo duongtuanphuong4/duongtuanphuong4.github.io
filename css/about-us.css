@@ -1,0 +1,52 @@
+.main-navbar
+{
+    margin-top: 25px;
+}
+.main-navbar i
+{
+    margin-right: 10px;
+}
+.main-navbar a
+{
+    font-size: 1.14286em;
+    font-weight: 550;
+    background-color: transparent;
+}
+.main-navbar a:hover
+{
+    color: #e25700;
+}
+.main-navbar a:last-child
+{
+    color: #e25700;
+}
+
+
+
+
+
+.about-us-main
+{
+    margin: 45px auto;
+    color: #252525;
+}
+
+.title
+{
+    font-size: 1.71429em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.about-us-main p,.about-us-main li
+{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.about-us-main ul
+{
+    list-style-type: disc;
+}
+.about-us-main ul li 
+{
+    margin-left: 18px;
+}
