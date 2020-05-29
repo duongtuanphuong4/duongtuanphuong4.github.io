@@ -1,0 +1,19 @@
+.main-navbar
+{
+    margin-top: 25px;
+}
+
+.main-navbar a
+{
+    font-size: 1.14286em;
+    font-weight: 550;
+    background-color: transparent;
+}
+.main-navbar a:hover
+{
+    color: #e25700;
+}
+.main-navbar a:last-child
+{
+    color: #e25700;
+}
