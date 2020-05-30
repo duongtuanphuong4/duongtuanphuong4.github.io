@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
+
 <body>
     <header class="header">
         <div class="top-bar">
@@ -24,7 +26,7 @@
                         <li><a href=""><i class="far fa-check-circle"></i> Thanh toán</a></li>
                         <li><a href=""> | </a></li>
                         <li><a href=""><i class="fas fa-user"></i> Tài khoản</a></li>
-                    </ul>                    
+                    </ul>
                 </div>
             </div>
         </div>
@@ -42,7 +44,8 @@
                         <input type="text" placeholder="Tìm kiếm ... ">
                         <button><i class="fas fa-search"></i></button>
                     </div>
-                    <div class="cart"><a href="cart.html"><i class="fas fa-cart-arrow-down">  </i> Giỏ hàng : (0)</a></div>
+                    <div class="cart"><a href="cart.html"><i class="fas fa-cart-arrow-down"> </i> Giỏ hàng : (0)</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -51,9 +54,9 @@
                 <ul>
                     <li><a href="../index.html">Trang chủ</a></li>
                     <li><a href="about-us.html">Giới thiệu</a></li>
-                    <li class="active"><a href="product.html">Sản phẩm</a></li>
+                    <li><a href="product.html">Sản phẩm</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li class="active"><a href="contact.html">Liên hệ</a></li>
                 </ul>
             </div>
         </div>
@@ -64,16 +67,53 @@
     </div>
 
 
-    <div class="map">
+    <div class="container" id="googleMap" style="width: 100%;height:380px; margin: 45px auto;"></div>
+    <div class="contact-main container">
+        <div class="left-item">
+            <div class="item-content">
+                <p>Tên <span>*</span></p>
+                <input type="text">
+            </div>
+            <div class="item-content">
+                <p>Số điện thoại <span>*</span></p>
+                <input type="text">
+            </div>
+            <div class="item-content">
+                <p>Email <span>*</span></p>
+                <input type="text">
+            </div>
+            <div class="item-content" id="last-item">
+                <p>Nội dung <span>*</span></p>
+                <input type="text"> 
+            </div>
+            <div class="btn">
+                <a href="">Gửi liên hệ</a>
+            </div>
+        </div>
+        <div class="right-item">
+            <h2 class="contact-title">
+                Của hàng nội thất Furniture
+            </h2>
+            <p>Cửa hàng nội thất Furniture chuyên cung cấp tất cả các mặt hàng nội thất cao cấp trong nước và quốc tế</p>
+            <div class="widget-item">
+                <h2 class="contact-title">
+                    <i class="fas fa-user"></i>Thông tin liên hệ
+                </h2>
+                <p>Địa chỉ: 268 Cầu Giấy, Hà Nội, Vietnam
+                </p>
+                <p>Email: <span>abcxyz@gmail.com</span></p>
+                <p>Điện thoại: <span>0123453626</span></p>
+            </div>
+        </div>
     </div>
-
 
     <footer class="footer">
         <div class="site-footer">
             <div class="left-site">
                 <div class="top-site">
                     <h3>Về cửa hàng</h3>
-                    <p>Cửa hàng nội thất Furniture chuyên cung cấp tất cả các mặt hàng nội thất cao cấp trong nước và quốc tế
+                    <p>Cửa hàng nội thất Furniture chuyên cung cấp tất cả các mặt hàng nội thất cao cấp trong nước và
+                        quốc tế
                     </p>
                 </div>
                 <div class="bottom-site">
@@ -126,14 +166,34 @@
                 <a href=""><i class="fab fa-facebook-f"></i></a>
                 <a href=""><i class="fab fa-youtube"></i></a>
                 <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-instagram"></i>  </a> 
+                <a href=""><i class="fab fa-instagram"></i> </a>
             </div>
         </div>
     </footer>
-    
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=#{your_app_key}&sensor=false"></script>
+    <script>
+        //Khoi tao Map
+        function initialize() {
+            //Khai bao cac thuoc tinh
+            var mapProp = {
+                //Tam ban do, quy dinh boi kinh do va vi do
+                center: new google.maps.LatLng(51.508742, -0.120850),
+                //set default zoom cua ban do khi duoc load
+                zoom: 5,
+                //Dinh nghia type
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            //Truyen tham so cho cac thuoc tinh Map cho the div chua Map
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="../js/header.js"></script>
 
 </body>
+
 </html>

@@ -17,3 +17,68 @@
 {
     color: #e25700;
 }
+
+
+.contact-main
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+
+.item-content
+{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+.item-content p
+{
+    color: #252525;
+}
+.item-content span
+{
+    color: red;
+}
+.item-content input
+{
+    margin-left: 15px;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+}
+.btn
+{
+    float: right;
+    margin: 10px;
+}
+#last-item input
+{
+    height: 100px;
+}
+#last-item p
+{
+    margin-bottom: 50px;
+}
+
+
+.right-item h2
+{
+    font-size: 16px;
+    font-weight: 700px;
+    padding: 10px;
+}
+.widget-item
+{
+    margin-top: 30px;
+}
+.right-item p
+{
+    padding: 0 10px;    
+    color: #636363;
+    margin-bottom: 10px;
+}
