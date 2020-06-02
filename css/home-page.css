@@ -93,13 +93,42 @@
     gap: 30px;
 }
 
-.policy .policy-item
+.policy .policy-item    
 {
-    border: 1px solid black;
-    height: 200px;
+    border: 1px solid #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 40px;
+    background-color: #fcfcfc;
+
 }
 
+.policy-icon,.policy-detail
+{
+    text-align: center;
+}
 
+.policy-detail h3
+{
+    color: #383838;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.policy-detail p
+{
+    color: #686868;
+    font-size: 15px;
+}
+
+.policy-item:hover .policy-icon
+{
+    margin-left: 20px;
+    transition: all .4s;
+}
 
 
 
@@ -340,6 +369,11 @@
     color: #ffffff;
     text-transform: uppercase;
     padding: 15px 20px;
+}
+.seemore:hover
+{
+    opacity: .8;
+    transition: opacity .4s;
 }
 
 
